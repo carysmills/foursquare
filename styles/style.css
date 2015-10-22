@@ -129,7 +129,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   font-family: 'Oswald', sans-serif;
-  color: #58531D; }
+  color: #58531D;
+  background: red; }
 
 img.axe {
   width: 10%; }
