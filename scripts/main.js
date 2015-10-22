@@ -19,11 +19,11 @@ activity.getChoice = function(userChoice) {
     	client_secret: activity.secret,
     	near: "toronto",
     	query: userChoice,
-    	v: activity.version 
+    	v: activity.version, 
+      limit: 5
     }
   }).then(function(res) {
-      activity.displayResults(res.response.groups[0].items); //to get within the array info that we need. could move elsewhere
-      activity.plotMap();
+      activity.displayResults(res.response.groups[0].items); 
   });
 };
 
@@ -35,17 +35,21 @@ activity.displayResults = function(venues){
     var location = $("<h3>").text(value.location);
     var hours = $("<h3>").text(value.hours);
     var rating = $("<h3>").text(value.rating);
-    var review = $("<p>").text(value.tips[0].text); // ***I think this error is because some don't have this, causes not to show
     var website = $("<a>").attr("href", value.venue.url);
-    var container = $("<div>").append(name, location, hours, rating, review, website);
+    var container = $("<div>").append(name, location, hours, rating, website);
     $("#text").append(container);
+    L.marker([value.venue.location.lat,value.venue.location.lng]).bindPopup
+    ("<h4>"+ value.venue.name+"</h4>" +
+    "<a href = '"+ value.venue.url+"'>Visit website</a>" +
+    "<h4>"+ value.venue.location.address+"</h4>")
+    .addTo(activity.map);
   });
 };
 
 activity.getMap = function() {
   L.mapbox.accessToken = activity.access;
-  activity.map = L.mapbox.map('map', 'carys.nn6p55nf')
-      .setView([43.677, -79.436], 12);
+  activity.map = L.mapbox.map('map', 'carys.npajk2lb')
+      .setView([43.677, -79.436], 11);
 };
 
 activity.plotMap = function(){
