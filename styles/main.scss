@@ -1,0 +1,14 @@
+@import 'setup';
+
+$blue: #98DDCA;
+$darkgreen: #58531D;
+$lightgreen: #8A792E;
+
+body {
+	font-family: 'Oswald', sans-serif;
+	color: $darkgreen;
+}
+
+img.axe {
+	width: 10%;
+}
