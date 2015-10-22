@@ -127,9 +127,21 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 * {
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%; }
+
 body {
   font-family: 'Oswald', sans-serif;
-  color: #58531D; }
+  color: #58531D;
+  font-size: 12px;
+  font-size: 1.2rem; }
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 52px;
+  font-size: 5.2rem;
+  letter-spacing: 5px;
+  text-transform: uppercase; }
 
 img.axe {
   width: 10%; }

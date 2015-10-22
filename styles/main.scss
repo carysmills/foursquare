@@ -3,10 +3,29 @@
 $blue: #98DDCA;
 $darkgreen: #58531D;
 $lightgreen: #8A792E;
+$headerfont: 'Oswald', sans-serif;
+$bodyfont: 'Quicksand', sans-serif;
+
+@mixin fontSize($number) {
+	font-size: $number * 1px;
+	font-size: ($number / 10) * 1rem;
+}
+
+html {
+	font-size: 62.5%;
+}
 
 body {
 	font-family: 'Oswald', sans-serif;
 	color: $darkgreen;
+	@include fontSize(12);
+}
+
+h1 {
+	font-family: $headerfont;
+	@include fontSize(52);
+	letter-spacing: 5px;
+	text-transform: uppercase;
 }
 
 img.axe {
