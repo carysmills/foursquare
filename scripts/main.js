@@ -32,9 +32,9 @@ activity.displayResults = function(venues){
     var location = $("<h3>").text(value.location);
     var hours = $("<h3>").text(value.hours);
     var rating = $("<h3>").text(value.rating);
-    var review = $("<p>").text(value.tips[0].text); // ***I think this error is because some don't have this, causes not to show
+    // var review = $("<p>").text(value.tips[0].text); // ***I think this error is because some don't have this, causes not to show
     var website = $("<a>").attr("href", value.venue.url);
-    var container = $("<div>").append(name, location, hours, rating, review, website);
+    var container = $("<div>").append(name, location, hours, rating, website);
     // var info = $(".text").append(container);
     $("#text").append(container);
   });
