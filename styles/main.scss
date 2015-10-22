@@ -7,9 +7,13 @@ $lightgreen: #8A792E;
 body {
 	font-family: 'Oswald', sans-serif;
 	color: $darkgreen;
-	background: red;
 }
 
 img.axe {
 	width: 10%;
+}
+
+.map { 
+	height: 70vh;
+	margin: 5%;
 }

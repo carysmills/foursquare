@@ -129,8 +129,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 body {
   font-family: 'Oswald', sans-serif;
-  color: #58531D;
-  background: red; }
+  color: #58531D; }
 
 img.axe {
   width: 10%; }
+
+.map {
+  height: 70vh;
+  margin: 5%; }
