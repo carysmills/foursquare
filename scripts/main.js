@@ -53,8 +53,10 @@ activity.getMap = function() {
 };
 
 activity.plotMap = function(){
+  // L.mapbox.markerLayer().clearLayers();
   $.each(venues, function(i, value) {
       L.marker([value.venue.location.lat,value.venue.location.lng]).addTo(activity.map);
+      L.marker([0]).addTo(activity.map);
   });
 };
 
@@ -65,6 +67,7 @@ activity.init = function() {
   $("#activity").on("change", function() {
       var quirky = $(this).val();
       $("#text").empty();
+      // activity.plotMap();
       activity.getChoice(quirky);
   });
 };
