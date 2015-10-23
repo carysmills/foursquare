@@ -58,14 +58,15 @@ activity.getMap = function() {
 
 // everything to run on doc ready
 activity.init = function() {
-  activity.getMap(); 
+  // activity.getMap(); 
 	activity.getChoice("bowling"),
   $("#activity").on("change", function(e) {
       e.preventDefault();
       var quirky = $(this).val();
       $("#text").empty();
       activity.getChoice(quirky);
-      $('main').show();
+      $('main').show(); //this needs to be here specifically
+      activity.getMap(); //this needs to be here specifically too
       $('html,body').animate({scrollTop:$("#venues").offset().top}, 'slow');
   });
 };
