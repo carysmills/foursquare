@@ -32,7 +32,18 @@ img.axe {
 	width: 10%;
 }
 
+#venues {
+	display: flex;
+	flex-direction: row;
+	justify-content: center; 
+}
+
+.text {
+	width: 40vh;
+}
+
 .map { 
 	height: 70vh;
+	width: 100vh;
 	margin: 5%;
 }

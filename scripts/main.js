@@ -7,6 +7,7 @@ activity.secret = "PDZOVDI2YNL1IJ1NLSPZ0MJ3VXFTHY2DDF0LMWN2HC01FENV";
 activity.version = "2013081520";
 activity.access = "pk.eyJ1IjoiY2FyeXMiLCJhIjoiY2lmcnA0bDAxMG1yNHMybTB4cDFkMnEzMyJ9.4Z26iDuKWwLy8qs1MyTkDg";
 
+activity.markerLayer = L.layerGroup(); //the layers for the map go in the group so they can be removed
 
 //initial ajax call
 activity.getChoice = function(userChoice) {
@@ -29,45 +30,40 @@ activity.getChoice = function(userChoice) {
 
 // display the activities
 activity.displayResults = function(venues){
+  activity.markerLayer.clearLayers();
   $.each(venues, function(i, value) {
-    console.log(value);
+    //to display in results div
     var name = $("<h2>").text(value.venue.name);
-    var location = $("<h3>").text(value.location);
-    var hours = $("<h3>").text(value.hours);
-    var rating = $("<h3>").text(value.rating);
-    var website = $("<a>").attr("href", value.venue.url);
-    var container = $("<div>").append(name, location, hours, rating, website);
+    var location = $("<h3>").text(value.venue.location.address);
+    var rating = $("<h3>").text("Rating: " + value.venue.rating + "/10, based on " + value.venue.ratingSignals + " votes." );
+    var site = "Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for more info";
+    var container = $("<div>").append(name, location, rating, site);
     $("#text").append(container);
+    //to display on map
     L.marker([value.venue.location.lat,value.venue.location.lng]).bindPopup
     ("<h4>"+ value.venue.name+"</h4>" +
     "<a href = '"+ value.venue.url+"'>Visit website</a>" +
     "<h4>"+ value.venue.location.address+"</h4>")
-    .addTo(activity.map);
+    .addTo(activity.markerLayer);
   });
+  activity.markerLayer.addTo(activity.map);
 };
 
+//get the map
 activity.getMap = function() {
   L.mapbox.accessToken = activity.access;
   activity.map = L.mapbox.map('map', 'carys.npajk2lb')
       .setView([43.677, -79.436], 11);
 };
 
-activity.plotMap = function(){
-  // L.mapbox.markerLayer().clearLayers();
-  $.each(venues, function(i, value) {
-      L.marker([value.venue.location.lat,value.venue.location.lng]).addTo(activity.map);
-      L.marker([0]).addTo(activity.map);
-  });
-};
-
 // everything to run on doc ready
 activity.init = function() {
   activity.getMap(); 
 	activity.getChoice("bowling"),
-  $("#activity").on("change", function() {
+  $("#activity").on("change", function(e) {
+      e.preventDefault();
       var quirky = $(this).val();
       $("#text").empty();
-      // activity.plotMap();
       activity.getChoice(quirky);
   });
 };
