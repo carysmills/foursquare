@@ -132,16 +132,50 @@ html {
 
 body {
   font-family: 'Oswald', sans-serif;
-  color: #58531D;
   font-size: 12px;
   font-size: 1.2rem; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto; }
+
+img.axe {
+  width: 7%;
+  position: relative;
+  left: -488px;
+  top: 20px; }
+
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  text-align: center; }
+  header h2 {
+    font-size: 34px;
+    font-size: 3.4rem;
+    margin: 0; }
+  header p {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px 20px 40px 20px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    font-size: 1.4rem; }
+  header label {
+    position: relative;
+    bottom: 10px;
+    font-size: 14px;
+    font-size: 1.4rem; }
 
 h1 {
   font-family: "Oswald", sans-serif;
   font-size: 52px;
   font-size: 5.2rem;
   letter-spacing: 5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-top: 100px;
+  margin: 0; }
 
 img.axe {
   width: 10%; }
@@ -164,3 +198,7 @@ img.axe {
   height: 70vh;
   width: 100vh;
   margin: 5%; }
+
+main {
+  display: none; }
+

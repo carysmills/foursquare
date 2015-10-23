@@ -65,6 +65,8 @@ activity.init = function() {
       var quirky = $(this).val();
       $("#text").empty();
       activity.getChoice(quirky);
+      $('main').show();
+      $('html,body').animate({scrollTop:$("#venues").offset().top}, 'slow');
   });
 };
 
