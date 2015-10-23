@@ -177,5 +177,28 @@ h1 {
   padding-top: 100px;
   margin: 0; }
 
+img.axe {
+  width: 10%; }
+
+#venues {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.text {
+  width: 40vh; }
+
+.map {
+  height: 70vh;
+  width: 100vh;
+  margin: 5%; }
+
 main {
   display: none; }
+
