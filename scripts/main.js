@@ -44,9 +44,11 @@ activity.displayResults = function(venues){
 activity.init = function() {
 	activity.getChoice("bowling"),
   $("#activity").on("change", function() {
-      var quirky = $(this).val(); // ***this variable was called activity and i think it was confusing because of global variable
+      var quirky = $(this).val(); 
       $("#text").empty();
       activity.getChoice(quirky);
+      $('main').show();
+      $('html,body').animate({scrollTop:$("#venues").offset().top}, 'slow');
   });
 };
 
