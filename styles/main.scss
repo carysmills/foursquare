@@ -81,12 +81,37 @@ main {
 	justify-content: center; 
 }
 
+main.container {
+	margin: 0 auto;
+}
+
 .text {
 	width: 40vh;
+}
+
+.text h2 {
+	@include fontSize(24);
+
+}
+
+.text div {
+	width: 100%;
+	padding: 30px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+
+.text h3 {
+	padding: 5px 0;
+}
+
+.text a {
+	text-decoration: none;
+	color: $darkgreen;
 }
 
 .map { 
 	height: 70vh;
 	width: 100vh;
-	margin: 5%;
+	margin: 5% 5% 5% 5%;
 }
