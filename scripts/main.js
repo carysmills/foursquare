@@ -24,7 +24,7 @@ activity.getChoice = function(userChoice) {
       limit: 10
     }
   }).then(function(res) {
-      activity.displayResults(res.response.groups[0].items); 
+      activity.displayResults(res.response.groups[0].items);
   });
 };
 
