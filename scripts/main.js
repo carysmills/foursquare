@@ -25,7 +25,6 @@ activity.getChoice = function(userChoice) {
     }
   }).then(function(res) {
       activity.displayResults(res.response.groups[0].items);
-      activity.storeResults = res.response.groups[0].items;
   });
 };
 
