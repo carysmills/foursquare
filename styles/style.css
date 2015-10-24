@@ -191,10 +191,31 @@ main {
       -ms-flex-pack: center;
           justify-content: center; }
 
+main.container {
+  margin: 0 auto; }
+
 .text {
   width: 40vh; }
+
+.text h2 {
+  font-size: 24px;
+  font-size: 2.4rem; }
+
+.text div {
+  width: 100%;
+  padding: 30px;
+  margin-right: 10px;
+  margin-bottom: 30px; }
+
+.text h3 {
+  padding: 5px 0; }
+
+.text a {
+  text-decoration: none;
+  color: #58531D; }
 
 .map {
   height: 70vh;
   width: 100vh;
-  margin: 5%; }
+
+  margin: 5% 5% 5% 5%; }

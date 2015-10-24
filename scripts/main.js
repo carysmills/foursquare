@@ -21,7 +21,7 @@ activity.getChoice = function(userChoice) {
     	near: "toronto",
     	query: userChoice,
     	v: activity.version, 
-      limit: 5
+      limit: 10
     }
   }).then(function(res) {
       activity.displayResults(res.response.groups[0].items); 
