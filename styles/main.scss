@@ -90,9 +90,37 @@ main {
 	@include fontSize(24);
 	position: relative;
 	left: -25px;
-
 }
 
+.arrow:before {
+   font-family: FontAwesome;
+   content: "\f124";
+   font-size: 1em;
+}
+
+.star:before {
+   font-family: FontAwesome;
+   content: "\f005";
+   font-size: 1em;
+}
+
+.check:before {
+   font-family: FontAwesome;
+   content: "\f00c";
+   font-size: 1em;
+}
+
+.user:before {
+   font-family: FontAwesome;
+   content: "\f007";
+   font-size: 1em;
+}
+
+.site:before {
+   font-family: FontAwesome;
+   content: "\f061";
+   font-size: 1em;
+}
 // This is the parent container of the answer section
 
 div.text {
@@ -112,110 +140,111 @@ div.text {
 .text h3 {
 	padding: 5px 0;
 	position: relative;
+    left: -25px;
 }
 
-// ICONS
+// // ICONS
 
-.fa-location-arrow {
-	position: absolute;
-	left: 0;
-}
+// .fa-location-arrow {
+// 	position: absolute;
+// 	left: 0;
+// }
 
-.fa-location-arrow.first {
-	left: 102px;
-    top: 885px;
-}
+// .fa-location-arrow.first {
+// 	left: 102px;
+//     top: 885px;
+// }
 
-.fa-location-arrow.second {
-	left: 500px;
-	top: 885px;
-}
+// .fa-location-arrow.second {
+// 	left: 500px;
+// 	top: 885px;
+// }
 
-.fa-location-arrow.third {
-	left: 900px;
-    top: 885px;
+// .fa-location-arrow.third {
+// 	left: 900px;
+//     top: 885px;
 
-}
+// }
 
-// Star Icon
+// // Star Icon
 
-.fa-star.first {
-	position: absolute;
-	left: 102px;
-    top: 930px;
-}
+// .fa-star.first {
+// 	position: absolute;
+// 	left: 102px;
+//     top: 930px;
+// }
 
-.fa-star.second {
-	position: absolute;
-	left: 500px;
-	top: 930px;
-}
+// .fa-star.second {
+// 	position: absolute;
+// 	left: 500px;
+// 	top: 930px;
+// }
 
-.fa-star.third {
-	position: absolute;
-	left: 900px;
-    top: 930px;
-}
+// .fa-star.third {
+// 	position: absolute;
+// 	left: 900px;
+//     top: 930px;
+// }
 
-// checkmark icon
+// // checkmark icon
 
-.fa-check.first {
-	position: absolute;
-	left: 102px;
-    top: 975px;
-}
+// .fa-check.first {
+// 	position: absolute;
+// 	left: 102px;
+//     top: 975px;
+// }
 
-.fa-check.second {
-	position: absolute;
-	left: 500px;
-	top: 975px;
-}
+// .fa-check.second {
+// 	position: absolute;
+// 	left: 500px;
+// 	top: 975px;
+// }
 
-.fa-check.third {
-	position: absolute;
-	left: 900px;
-    top: 975px;
-}
+// .fa-check.third {
+// 	position: absolute;
+// 	left: 900px;
+//     top: 975px;
+// }
 
-//person icon
+// //person icon
 
-.fa-user.first {
-	position: absolute;
-	left: 102px;
-    top: 1020px;
-}
+// .fa-user.first {
+// 	position: absolute;
+// 	left: 102px;
+//     top: 1020px;
+// }
 
-.fa-user.second {
-	position: absolute;
-	left: 500px;
-	top: 1020px;
-}
+// .fa-user.second {
+// 	position: absolute;
+// 	left: 500px;
+// 	top: 1020px;
+// }
 
-.fa-user.third {
-	position: absolute;
-	left: 900px;
-    top: 1020px;
-}
+// .fa-user.third {
+// 	position: absolute;
+// 	left: 900px;
+//     top: 1020px;
+// }
 
-// arrow icon
+// // arrow icon
 
-.fa-arrow-right.first {
-	position: absolute;
-	left: 102px;
-    top: 1065px;
-}
+// .fa-arrow-right.first {
+// 	position: absolute;
+// 	left: 102px;
+//     top: 1065px;
+// }
 
-.fa-arrow-right.second {
-	position: absolute;
-	left: 500px;
-	top: 1065px;
-}
+// .fa-arrow-right.second {
+// 	position: absolute;
+// 	left: 500px;
+// 	top: 1065px;
+// }
 
-.fa-arrow-right.third {
-	position: absolute;
-	left: 900px;
-    top: 1065px;
-}
+// .fa-arrow-right.third {
+// 	position: absolute;
+// 	left: 900px;
+//     top: 1065px;
+// }
 
 .text h2 {
 	   font-size: 2.2rem;
