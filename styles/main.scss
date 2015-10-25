@@ -18,22 +18,27 @@ html {
 body {
 	font-family: 'Oswald', sans-serif;
 	@include fontSize(12);
+	
 }
 
-.container {
+.outerContainer {
 	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.innerContainer {
+	max-width: 980px;
 	margin: 0 auto;
 }
 
 img.axe {
 	width: 7%;
 	position: relative;
-	left: -488px;
+	left: -495px;
 	top: 20px;
 }
 
 header {
-	// background-image: url("../assets/shoes.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -75,15 +80,11 @@ main {
 	display: none;
 }
 
-#venues {
-	display: flex;
-	flex-direction: row;
-	justify-content: center; 
-}
-
-main.container {
-	margin: 0 auto;
-}
+// #venues {
+// 	display: flex;
+// 	flex-direction: row;
+// 	justify-content: center; 
+// }
 
 .text {
 	width: 40vh;
@@ -94,24 +95,61 @@ main.container {
 
 }
 
+// This is the parent container of the answer section
+
+div.text {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	width: 120%;
+	margin: 20px;
+}
+
+// these are the individual divs inside
+
 .text div {
 	width: 100%;
-	padding: 30px;
+	padding: 0 30px 30px 20px;
 	margin-right: 10px;
-	margin-bottom: 30px;
+	background: $blue;
+	border: 2px solid lightgrey;
 }
 
 .text h3 {
 	padding: 5px 0;
 }
 
+.text h2 {
+	border: 1px solid black;
+}
+
 .text a {
 	text-decoration: none;
-	color: $darkgreen;
+	color: $lightgreen;
 }
 
 .map { 
 	height: 70vh;
-	width: 100vh;
 	margin: 5% 5% 5% 5%;
+}
+
+footer {
+	background: rgba(255,255,255,0.6);
+
+	p {
+		padding: 20px 0 10px 0;
+		font-family: $bodyfont;
+		text-align: center;
+		font-weight: bold;
+		margin: 0;
+	}
+}
+
+@media (max-width: 480px) {
+
+	#venues {
+		flex-direction: column;
+	}
+	
 }

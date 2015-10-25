@@ -39,6 +39,7 @@ activity.displayResults = function(venues){
     var site = "Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for more info";
     var container = $("<div>").append(name, location, rating, site);
     $("#text").append(container);
+    
     //to display on map
     L.marker([value.venue.location.lat,value.venue.location.lng]).bindPopup
     ("<h4>"+ value.venue.name+"</h4>" +
