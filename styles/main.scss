@@ -42,7 +42,7 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 100vh;
+	height: calc(100vh - 45px);
 	text-align: center;
 	// color: white;
 
@@ -275,10 +275,84 @@ footer {
 	}
 }
 
+/************ MEDIA QUERIES *************/
+
+@media (max-width: 940px) {
+
+	#venues {
+		flex-direction: column;
+	}
+
+	img.axe {
+		margin-left: 23%;
+		width: 85px;
+	}
+
+	header p {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.text div {	
+		width:80%;
+		margin-left: 9%;
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	#venues {
+		flex-direction: column;
+	}
+
+	img.axe {
+		margin-left: 50%;
+		width: 85px;
+	}
+
+	header p {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.text div {	
+		width:80%;
+		margin-left: 9%;
+		text-align: center;
+	}
+
+}
+
+
 @media (max-width: 480px) {
 
 	#venues {
 		flex-direction: column;
 	}
-	
+
+	img.axe {
+		margin-left:145%;
+		width: 85px;
+	}
+
+	header p {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.text div {	
+		width:80%;
+	}
+
+}
+
+@media (max-width: 400px) {
+
+	img.axe {
+		margin-left:162%;
+		width: 85px;
+	}
+
 }
