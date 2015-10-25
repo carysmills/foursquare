@@ -35,11 +35,11 @@ activity.displayResults = function(venues){
   $.each(venues, function(i, value) {
     //to display in results div
     var name = $("<h2>").text(value.venue.name);
-    var location = $("<h3>").text(value.venue.location.address);
+    var location = $("<h3>").text(value.venue.location.address).append();
     var rating = $("<h3>").text("Rating: " + (value.venue.rating ? value.venue.rating : '0') + "/10, based on " + (value.venue.ratingSignals ? value.venue.ratingSignals : '0') + " votes." );
     var checkIns = $("<h3>").text("All time FourSquare check-ins: " + value.venue.stats.checkinsCount);
     var checkedIn = $("<h3>").text("Check-ins now: " + value.venue.hereNow.summary);
-    var site = "Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for hours and more info";
+    var site = "<h3>Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for hours and more info<h3>";
     var container = $("<div>").append(name, location, rating, checkIns, checkedIn, site);
     $("#text").append(container);
     
@@ -71,6 +71,13 @@ activity.init = function() {
       $('main').show(); //this needs to be here specifically
       activity.getMap(); //this needs to be here specifically too
       $('html,body').animate({scrollTop:$("#venues").offset().top}, 'slow');
+
+      if (container == 1) {
+        $('.second,.third').hide();
+      }
+      if (container == 2) {
+        $('.third').hide();
+      }
   });
 };
 
