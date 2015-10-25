@@ -88,6 +88,8 @@ main {
 
 .text h2 {
 	@include fontSize(24);
+	position: relative;
+	left: -25px;
 
 }
 
@@ -101,24 +103,129 @@ div.text {
 
 .text div {
 	float: left;
+	background: #98DDCA;
 	width: 28%;
 	margin: 45px 6px 45px 47px;
-	background: $blue;
-	padding: 15px 30px 35px 30px;
-
+	padding: 15px 30px 10px 65px;
 }
 
 .text h3 {
 	padding: 5px 0;
+	position: relative;
+}
+
+// ICONS
+
+.fa-location-arrow {
+	position: absolute;
+	left: 0;
+}
+
+.fa-location-arrow.first {
+	left: 102px;
+    top: 885px;
+}
+
+.fa-location-arrow.second {
+	left: 500px;
+	top: 885px;
+}
+
+.fa-location-arrow.third {
+	left: 900px;
+    top: 885px;
+
+}
+
+// Star Icon
+
+.fa-star.first {
+	position: absolute;
+	left: 102px;
+    top: 930px;
+}
+
+.fa-star.second {
+	position: absolute;
+	left: 500px;
+	top: 930px;
+}
+
+.fa-star.third {
+	position: absolute;
+	left: 900px;
+    top: 930px;
+}
+
+// checkmark icon
+
+.fa-check.first {
+	position: absolute;
+	left: 102px;
+    top: 975px;
+}
+
+.fa-check.second {
+	position: absolute;
+	left: 500px;
+	top: 975px;
+}
+
+.fa-check.third {
+	position: absolute;
+	left: 900px;
+    top: 975px;
+}
+
+//person icon
+
+.fa-user.first {
+	position: absolute;
+	left: 102px;
+    top: 1020px;
+}
+
+.fa-user.second {
+	position: absolute;
+	left: 500px;
+	top: 1020px;
+}
+
+.fa-user.third {
+	position: absolute;
+	left: 900px;
+    top: 1020px;
+}
+
+// arrow icon
+
+.fa-arrow-right.first {
+	position: absolute;
+	left: 102px;
+    top: 1065px;
+}
+
+.fa-arrow-right.second {
+	position: absolute;
+	left: 500px;
+	top: 1065px;
+}
+
+.fa-arrow-right.third {
+	position: absolute;
+	left: 900px;
+    top: 1065px;
 }
 
 .text h2 {
 	   font-size: 2.2rem;
+	   height: 55px;
 }
 
 .text a {
 	text-decoration: none;
-	color: $lightgreen;
+	color: silver;
+	@include fontSize(16);
 }
 
 .map { 
