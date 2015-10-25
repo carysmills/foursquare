@@ -86,10 +86,6 @@ main {
 // 	justify-content: center; 
 // }
 
-.text {
-	width: 40vh;
-}
-
 .text h2 {
 	@include fontSize(24);
 
@@ -98,22 +94,18 @@ main {
 // This is the parent container of the answer section
 
 div.text {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	width: 120%;
 	margin: 20px;
 }
 
 // these are the individual divs inside
 
 .text div {
-	width: 100%;
-	padding: 0 30px 30px 20px;
-	margin-right: 10px;
+	float: left;
+	width: 28%;
+	margin: 45px 6px 45px 47px;
 	background: $blue;
-	border: 2px solid lightgrey;
+	padding: 15px 30px 35px 30px;
+
 }
 
 .text h3 {
@@ -121,7 +113,7 @@ div.text {
 }
 
 .text h2 {
-	border: 1px solid black;
+	   font-size: 2.2rem;
 }
 
 .text a {
@@ -132,6 +124,7 @@ div.text {
 .map { 
 	height: 70vh;
 	margin: 5% 5% 5% 5%;
+	clear: both;
 }
 
 footer {

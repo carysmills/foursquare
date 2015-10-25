@@ -21,12 +21,13 @@ activity.getChoice = function(userChoice) {
     	near: "toronto",
     	query: userChoice,
     	v: activity.version, 
-      limit: 10
+      limit: 3
     }
   }).then(function(res) {
-      activity.displayResults(res.response.groups[0].items); 
+      activity.displayResults(res.response.groups[0].items);
   });
 };
+
 
 // display the activities
 activity.displayResults = function(venues){
@@ -35,9 +36,11 @@ activity.displayResults = function(venues){
     //to display in results div
     var name = $("<h2>").text(value.venue.name);
     var location = $("<h3>").text(value.venue.location.address);
-    var rating = $("<h3>").text("Rating: " + value.venue.rating + "/10, based on " + value.venue.ratingSignals + " votes." );
-    var site = "Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for more info";
-    var container = $("<div>").append(name, location, rating, site);
+    var rating = $("<h3>").text("Rating: " + (value.venue.rating ? value.venue.rating : '0') + "/10, based on " + (value.venue.ratingSignals ? value.venue.ratingSignals : '0') + " votes." );
+    var checkIns = $("<h3>").text("All time FourSquare check-ins: " + value.venue.stats.checkinsCount);
+    var checkedIn = $("<h3>").text("Check-ins now: " + value.venue.hereNow.summary);
+    var site = "Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for hours and more info";
+    var container = $("<div>").append(name, location, rating, checkIns, checkedIn, site);
     $("#text").append(container);
     
     //to display on map
@@ -59,7 +62,6 @@ activity.getMap = function() {
 
 // everything to run on doc ready
 activity.init = function() {
-  // activity.getMap(); 
 	activity.getChoice("bowling"),
   $("#activity").on("change", function(e) {
       e.preventDefault();

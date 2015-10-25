@@ -7,44 +7,43 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet'/>
-    <link rel="stylesheet" href="flickity/flickity.css" media="screen">
 </head>
 <body>
-
-<div class="outerContainer">
-
-    <div class="innerCountainer">
-        <header>
-            <img class="axe" src="assets/axes.png" alt="logo">
-            <h1>Good Clean Fun</h1>
-            <h2>Toronto</h2>
-            <p>Find the fringe activities Toronto has to offer including Axe Throwing, Paddleboarding, bowling, and more. 
+<header>
+    <div class="container">
+        <img class="axe" src="assets/axes.png" alt="logo">
+        <h1>Good Clean Fun</h1>
+        <h2>Toronto</h2>
+        <p>Find the fringe activities Toronto has to offer including Axe Throwing, Paddleboarding, bowling, and more. 
                <!-- With Good Clean Fun, you can quickly and easily find fun activities in Toronto including Axe Throwing, Paddleboarding and more. Simply choose a category and we'll provide the details. -->
-           </p>
-                <label for="activity">Choose Activity</label>
-                <form action="">
-                <select name="activity" id="activity">
-                    <option value="bowling">Bowling</option>
-                    <option value="axe_throw">Axe Throwing</option>
-                    <option value="ping_pong">Ping Pong</option>
-                    <option value="laser_quest">Laser Quest</option>
-                    <option value="escape_game">Escape Room</option>
-                    <option value="track_and_field">Lawn Bowling</option>
-                    <option value="track_and_field">Bocce Ball</option>
-                    <option value="circus_arts">Trapeze</option>
-                    <option value="boardsports">Stand Up Paddle Boarding</option>
-                    <option value="mini_golf">Mini Golf</option>
-                </select>
-            </form>    
-    </header>
+       </p>
+            <label for="activity">Choose Activity</label>
+            <form action="">
+            <select name="activity" id="activity">
+                <option value="bowling">Bowling</option>
+                <option value="axe_throw">Axe Throwing</option>
+                <option value="ping_pong">Ping Pong</option>
+                <option value="laser_quest">Laser Quest</option>
+                <option value="escape_game">Escape Room</option>
+                <option value="track_and_field">Lawn Bowling</option>
+                <option value="track_and_field">Bocce Ball</option>
+                <option value="circus_arts">Trapeze</option>
+                <option value="boardsports">Stand Up Paddle Boarding</option>
+                <option value="mini_golf">Mini Golf</option>
+                <option value="paintball">Paintball</option>
+                <option value="go_kart">Go Karting</option>
+                <option value="sailing">Sailing</option>
+                <option value="climbing">Rock Climbing</option> 
+            </select>
+        </form>    
+    </div>
+</header>
 
 
     <main>
-        <div class="innerContainer" id="venues">
-            <div  class="text" id="text">
-            </div>
-            <div class="map" id="map">
-            </div>
+        <div class="container clearfix" id="venues">
+            <div class="text" id="text"></div>
+            <div class="map" id="map"></div>
         </div>
     </main>
     </div>
@@ -55,7 +54,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
-    <script src="flickity/flickity.pkgd.min.js"></script>
+    
 
 <!-- CREDITS:
 Axe by aizzzlinn from the Noun Project -->
