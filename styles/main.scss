@@ -15,6 +15,11 @@ html {
 	font-size: 62.5%;
 }
 
+nav {
+	background:$blue;
+	height: 43px;
+}
+
 body {
 	font-family: 'Oswald', sans-serif;
 	@include fontSize(12);
@@ -32,11 +37,29 @@ body {
 }
 
 img.axe {
-	width: 7%;
-	position: relative;
-	left: -495px;
-	top: 20px;
+	// width: 7%;
+	// position: relative;
+	// left: -495px;
+	// top: 20px;
+	width: 4%;
+    position: relative;
+    left: -495px;
+    top: 0;
+
 }
+
+svg {
+	width: 25px;
+    position: relative;
+    right: -505px;
+    top: -8px;
+}
+
+svg:first-child {
+	top: -15px;
+	right: -500px;
+}
+
 
 header {
 	background-repeat: no-repeat;
@@ -44,8 +67,9 @@ header {
 	background-position: center;
 	height: 100vh;
 	text-align: center;
+	// background: $blue;
 	
-	// color: white;
+
 
 
 		h2 {
@@ -73,7 +97,7 @@ h1 {
 	@include fontSize(52);
 	letter-spacing: 5px;
 	text-transform: uppercase;
-	padding-top: 100px;
+	padding-top: 140px;
 	margin: 0;
 }
 
@@ -81,46 +105,52 @@ main {
 	display: none;
 }
 
-// #venues {
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: center; 
-// }
-
 .text h2 {
 	@include fontSize(24);
 	position: relative;
 	left: -25px;
+	
+	
 }
 
 .arrow:before {
    font-family: FontAwesome;
    content: "\f124";
    font-size: 1em;
+   padding-right: 10px;
+   color: $darkgreen;
 }
 
 .star:before {
    font-family: FontAwesome;
    content: "\f005";
    font-size: 1em;
+   padding-right: 10px;
+   color: $darkgreen;
 }
 
 .check:before {
    font-family: FontAwesome;
    content: "\f00c";
    font-size: 1em;
+   padding-right: 10px;
+   color: $darkgreen;
 }
 
 .user:before {
    font-family: FontAwesome;
    content: "\f007";
    font-size: 1em;
+   padding-right: 10px;
+   color: $darkgreen;
 }
 
 .site:before {
    font-family: FontAwesome;
    content: "\f061";
    font-size: 1em;
+   padding-right: 10px;
+   color: $darkgreen;
 }
 // This is the parent container of the answer section
 
@@ -132,129 +162,38 @@ div.text {
 
 .text div {
 	float: left;
-	background: #98DDCA;
+	background:white;
+	background: $blue;
 	width: 28%;
 	margin: 45px 6px 45px 47px;
 	padding: 15px 30px 10px 65px;
+	border: 4px solid black;
 }
 
 .text h3 {
 	padding: 5px 0;
 	position: relative;
     left: -25px;
+    // border-bottom: 2px solid $darkgreen;
 }
 
-// // ICONS
-
-// .fa-location-arrow {
-// 	position: absolute;
-// 	left: 0;
+// .text h3.arrow {
+// 	border-top: 2px solid $lightgreen;
+// 	padding-top: 15px;
+// 	width: 190px;
 // }
 
-// .fa-location-arrow.first {
-// 	left: 102px;
-//     top: 885px;
-// }
-
-// .fa-location-arrow.second {
-// 	left: 500px;
-// 	top: 885px;
-// }
-
-// .fa-location-arrow.third {
-// 	left: 900px;
-//     top: 885px;
-
-// }
-
-// // Star Icon
-
-// .fa-star.first {
-// 	position: absolute;
-// 	left: 102px;
-//     top: 930px;
-// }
-
-// .fa-star.second {
-// 	position: absolute;
-// 	left: 500px;
-// 	top: 930px;
-// }
-
-// .fa-star.third {
-// 	position: absolute;
-// 	left: 900px;
-//     top: 930px;
-// }
-
-// // checkmark icon
-
-// .fa-check.first {
-// 	position: absolute;
-// 	left: 102px;
-//     top: 975px;
-// }
-
-// .fa-check.second {
-// 	position: absolute;
-// 	left: 500px;
-// 	top: 975px;
-// }
-
-// .fa-check.third {
-// 	position: absolute;
-// 	left: 900px;
-//     top: 975px;
-// }
-
-// //person icon
-
-// .fa-user.first {
-// 	position: absolute;
-// 	left: 102px;
-//     top: 1020px;
-// }
-
-// .fa-user.second {
-// 	position: absolute;
-// 	left: 500px;
-// 	top: 1020px;
-// }
-
-// .fa-user.third {
-// 	position: absolute;
-// 	left: 900px;
-//     top: 1020px;
-// }
-
-// // arrow icon
-
-// .fa-arrow-right.first {
-// 	position: absolute;
-// 	left: 102px;
-//     top: 1065px;
-// }
-
-// .fa-arrow-right.second {
-// 	position: absolute;
-// 	left: 500px;
-// 	top: 1065px;
-// }
-
-// .fa-arrow-right.third {
-// 	position: absolute;
-// 	left: 900px;
-//     top: 1065px;
-// }
 
 .text h2 {
 	   font-size: 2.2rem;
-	   height: 55px;
+	   height: 70px;
+	   // border-bottom: 2px solid white;
+	   
 }
 
 .text a {
 	text-decoration: none;
-	color: silver;
+	color: $lightgreen;
 	@include fontSize(16);
 }
 
@@ -265,7 +204,8 @@ div.text {
 }
 
 footer {
-	background: rgba(255,255,255,0.6);
+	// background: rgba(255,255,255,0.6);
+	background: $blue;
 
 	p {
 		padding: 20px 0 10px 0;
@@ -273,6 +213,7 @@ footer {
 		text-align: center;
 		font-weight: bold;
 		margin: 0;
+		color: $darkgreen;
 	}
 }
 
