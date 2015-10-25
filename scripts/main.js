@@ -21,7 +21,7 @@ activity.getChoice = function(userChoice) {
     	near: "toronto",
     	query: userChoice,
     	v: activity.version, 
-      limit: 3
+      limit: 3,
     }
   }).then(function(res) {
       activity.displayResults(res.response.groups[0].items);
@@ -34,12 +34,12 @@ activity.displayResults = function(venues){
   activity.markerLayer.clearLayers();
   $.each(venues, function(i, value) {
     //to display in results div
-    var name = $("<h2>").text(value.venue.name);
-    var location = $("<h3>").text(value.venue.location.address).append();
-    var rating = $("<h3>").text("Rating: " + (value.venue.rating ? value.venue.rating : '0') + "/10, based on " + (value.venue.ratingSignals ? value.venue.ratingSignals : '0') + " votes." );
-    var checkIns = $("<h3>").text("All time FourSquare check-ins: " + value.venue.stats.checkinsCount);
-    var checkedIn = $("<h3>").text("Check-ins now: " + value.venue.hereNow.summary);
-    var site = "<h3>Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for hours and more info<h3>";
+    var name = $("<h2>").text(" " + value.venue.name);
+    var location = $("<h3>").addClass("arrow").text(" " + value.venue.location.address); 
+    var rating = $("<h3>").addClass("star").text(" Rating: " + (value.venue.rating ? value.venue.rating : '0') + "/10, based on " + (value.venue.ratingSignals ? value.venue.ratingSignals : '0') + " votes." );
+    var checkIns = $("<h3>").addClass("check").text(" All time FourSquare check-ins: " + value.venue.stats.checkinsCount);
+    var checkedIn = $("<h3>").addClass("user").text(" Check-ins now: " + value.venue.hereNow.summary);
+    var site = $("<h3>").addClass("site").html("Visit " + "<a href='" + value.venue.url + "'>website</a>" + " for hours and more info");
     var container = $("<div>").append(name, location, rating, checkIns, checkedIn, site);
     $("#text").append(container);
     
