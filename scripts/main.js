@@ -21,7 +21,7 @@ activity.getChoice = function(userChoice) {
     	near: "toronto",
     	query: userChoice,
     	v: activity.version, 
-      limit: 10
+      limit: 3
     }
   }).then(function(res) {
       activity.displayResults(res.response.groups[0].items);
@@ -42,6 +42,7 @@ activity.displayResults = function(venues){
     var site = "Visit " + "<a href = '"+ value.venue.url+"'>website</a>" + " for hours and more info";
     var container = $("<div>").append(name, location, rating, checkIns, checkedIn, site);
     $("#text").append(container);
+    
     //to display on map
     L.marker([value.venue.location.lat,value.venue.location.lng]).bindPopup
     ("<h4>"+ value.venue.name+"</h4>" +
