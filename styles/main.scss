@@ -206,16 +206,27 @@ div.text {
 footer {
 	// background: rgba(255,255,255,0.6);
 	background: $blue;
+	font-family: $bodyfont;
+	text-align: center;
 
-	p {
-		padding: 20px 0 10px 0;
-		font-family: $bodyfont;
-		text-align: center;
-		font-weight: bold;
-		margin: 0;
-		color: $darkgreen;
+	p:first-child {
+		text-align: left;
+		display: inline;
+		float: left;
+		padding-left: 70px;
+		
 	}
+
+	p:last-child {
+		text-align: right;
+		display: inline;
+		float: right;
+		padding-right: 20px;
+
+	}
+
 }
+
 
 @media (max-width: 480px) {
 
