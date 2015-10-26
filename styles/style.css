@@ -73,7 +73,7 @@ svg:not(:root) {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: .35em .625em .75em; }
+  padding: 0.35em 0.625em 0.75em; }
 
 button, input, select, textarea {
   font-family: inherit;
@@ -83,8 +83,7 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button, html input[type=button],
-input[type=reset], input[type=submit] {
+button, html input[type=button], input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
