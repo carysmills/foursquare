@@ -37,14 +37,14 @@ body {
 }
 
 img.axe {
-	// width: 7%;
-	// position: relative;
-	// left: -495px;
-	// top: 20px;
-	width: 4%;
-    position: relative;
-    left: -495px;
-    top: 0;
+	width: 5%;
+	position: relative;
+	left: -495px;
+	top: 20px;
+	// width: 4%;
+ //    position: relative;
+ //    left: -495px;
+ //    top: 0;
 
 }
 
@@ -67,6 +67,7 @@ header {
 	background-position: center;
 	height: 100vh;
 	text-align: center;
+	background: url("../assets/sailboat.jpg");
 	// background: $blue;
 	
 
@@ -177,20 +178,6 @@ div.text {
     // border-bottom: 2px solid $darkgreen;
 }
 
-// .text h3.arrow {
-// 	border-top: 2px solid $lightgreen;
-// 	padding-top: 15px;
-// 	width: 190px;
-// }
-
-
-.text h2 {
-	   font-size: 2.2rem;
-	   height: 70px;
-	   // border-bottom: 2px solid white;
-	   
-}
-
 .text a {
 	text-decoration: none;
 	color: $lightgreen;
@@ -204,18 +191,29 @@ div.text {
 }
 
 footer {
-	// background: rgba(255,255,255,0.6);
-	background: $blue;
+	background: rgba(255,255,255,0.6);
+	// background: $blue;
+	font-family: $bodyfont;
+	text-align: center;
 
-	p {
-		padding: 20px 0 10px 0;
-		font-family: $bodyfont;
-		text-align: center;
-		font-weight: bold;
-		margin: 0;
-		color: $darkgreen;
+	p:first-child {
+		text-align: left;
+		display: inline;
+		float: left;
+		padding-left: 70px;
+		
 	}
+
+	p:last-child {
+		text-align: right;
+		display: inline;
+		float: right;
+		padding-right: 20px;
+
+	}
+
 }
+
 
 @media (max-width: 480px) {
 
