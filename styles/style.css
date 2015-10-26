@@ -73,7 +73,7 @@ svg:not(:root) {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: .35em .625em .75em; }
 
 button, input, select, textarea {
   font-family: inherit;
@@ -83,7 +83,8 @@ button, input, select, textarea {
 button, input {
   line-height: normal; }
 
-button, html input[type=button], input[type=reset], input[type=submit] {
+button, html input[type=button],
+input[type=reset], input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer; }
 
@@ -167,7 +168,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: calc(100vh - 45px);
   text-align: center;
   background: url("../assets/sailboat.jpg"); }
   header h2 {
@@ -283,8 +284,62 @@ footer {
     float: right;
     padding-right: 20px; }
 
+/************ MEDIA QUERIES *************/
+@media (max-width: 940px) {
+  #venues {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  img.axe {
+    margin-left: 23%;
+    width: 85px; }
+  header p {
+    width: 80%;
+    margin: 0 auto; }
+  .text div {
+    width: 80%;
+    margin-left: 9%;
+    text-align: center; } }
+
+@media (max-width: 768px) {
+  #venues {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  img.axe {
+    margin-left: 50%;
+    width: 85px; }
+  header p {
+    width: 80%;
+    margin: 0 auto; }
+  .text div {
+    width: 80%;
+    margin-left: 9%;
+    text-align: center; } }
+
+@media (max-width: 760px) {
+  footer p:last-child {
+    display: none; } }
+
 @media (max-width: 480px) {
   #venues {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; } }
+            flex-direction: column; }
+  img.axe {
+    left: 200px;
+    position: absolute;
+    margin: 0 auto;
+    max-width: 85px; }
+  header p {
+    width: 100%;
+    margin: 0 auto; }
+  .text div {
+    width: 80%; } }
+
+@media (max-width: 400px) {
+  img.axe {
+    position: absolute;
+    margin: 0 auto;
+    margin-left: -45px;
+    width: 85px; } }

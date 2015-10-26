@@ -65,14 +65,11 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	height: 100vh;
+	height: calc(100vh - 45px);
 	text-align: center;
 	background: url("../assets/sailboat.jpg");
 	// background: $blue;
 	
-
-
-
 		h2 {
 			@include fontSize(34);
 			margin: 0;
@@ -214,11 +211,93 @@ footer {
 
 }
 
+/************ MEDIA QUERIES *************/
+
+@media (max-width: 940px) {
+
+	#venues {
+		flex-direction: column;
+	}
+
+	img.axe {
+		margin-left: 23%;
+		width: 85px;
+	}
+
+	header p {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.text div {	
+		width:80%;
+		margin-left: 9%;
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	#venues {
+		flex-direction: column;
+	}
+
+	img.axe {
+		margin-left: 50%;
+		width: 85px;
+	}
+
+	header p {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.text div {	
+		width:80%;
+		margin-left: 9%;
+		text-align: center;
+	}
+
+}
+
+@media (max-width: 760px) {
+
+	footer p:last-child {
+		display: none;
+	}
+}
 
 @media (max-width: 480px) {
 
 	#venues {
 		flex-direction: column;
 	}
-	
+
+	img.axe {
+		left:200px;
+		position: absolute;
+		margin: 0 auto;
+		max-width: 85px;
+	}
+
+	header p {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.text div {	
+		width:80%;
+	}
+}
+
+@media (max-width: 400px) {
+
+	img.axe {
+		position: absolute;
+		margin: 0 auto;
+		margin-left:-45px;
+		width: 85px;
+	}
+
 }

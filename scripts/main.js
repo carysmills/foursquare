@@ -35,7 +35,7 @@ activity.displayResults = function(venues){
   $.each(venues, function(i, value) {
     //to display in results div
     var name = $("<h2>").text(" " + value.venue.name);
-    var location = $("<h3>").addClass("arrow").text(" " + value.venue.location.address); 
+    var location = $("<h3>").addClass("arrow").text(" " + (value.venue.location.address ? value.venue.location.address : 'Address not available')); 
     var rating = $("<h3>").addClass("star").text(" Rating: " + (value.venue.rating ? value.venue.rating : '0') + "/10, based on " + (value.venue.ratingSignals ? value.venue.ratingSignals : '0') + " votes." );
     var checkIns = $("<h3>").addClass("check").text(" All time FourSquare check-ins: " + value.venue.stats.checkinsCount);
     var checkedIn = $("<h3>").addClass("user").text(" Check-ins now: " + value.venue.hereNow.summary);
